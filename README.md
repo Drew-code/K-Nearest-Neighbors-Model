@@ -2,10 +2,10 @@
 Quick Start Guide to K-NearestNeighbors Model in Python  
   
 ## Introduction  
-K-nearest neightbors is a gouping algorithum that picks a point in the data set, then looks for pattens in the data points  
+K-nearest neighbors is a gouping algorithum that picks a point in the data set, then looks for pattens in the data points  
 closest to that one. It then uses those patterns to determine what makes those points similar. Creating this model is very  
 similar to the other models in scikit-learn with a couple of extra steps. We will need to scale the features and then test  
-for the best number of neighbors used.
+for the best number of neighbors to use.
  
 ## Prerequisites
 1. Python 3.7 or newer  
@@ -27,7 +27,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 ```  
-Next import the csv file and clean it up a little. Below we are importing the csv file as an object "df".  
+Next import the csv file and assign it to an object. Below we are importing the csv file as an object ```df```.  
 Once again we print the head of the data along with the info to get an idea of what the data looks like.  
 
 ```
@@ -98,7 +98,7 @@ After the initial model is evaluated, a new model must in instantiated using the
 the model then has to be re-trained again and then predictions called on the train data that was split earlier.  
 Then it is time to compare results using the same metrics as before. This model takes some tweaking to get accurate.  
 As you will see in the graph that was created, this dataset is not a great example for this model. Feel free to use your own  
-data and see what you can coem up with.  
+data and see what you can come up with.  
 ```
 knn = KNeighborsClassifier(n_neighbors=25)
 knn.fit(X_train,y_train)
